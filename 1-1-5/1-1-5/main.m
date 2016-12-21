@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Account.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Account *account = [[Account alloc]initWithName:@"林" :21 :@"男性" :@"swift" ];
+        [account printInformation];
     }
     return 0;
 }
