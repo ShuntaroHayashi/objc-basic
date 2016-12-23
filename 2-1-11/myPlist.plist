@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>東北</key>
+	<dict>
+		<key>images</key>
+		<array>
+			<string>aomori</string>
+		</array>
+		<key>texts</key>
+		<array>
+			<string>青森</string>
+		</array>
+	</dict>
+	<key>関東</key>
+	<dict>
+		<key>texts</key>
+		<array>
+			<string>千葉県</string>
+			<string>神奈川県</string>
+			<string>東京都
+県庁所在地　新宿区
+人口　1362万人
+面積　2188㎢</string>
+		</array>
+		<key>images</key>
+		<array>
+			<string>chiba</string>
+			<string>kanagawa</string>
+			<string>tokyo</string>
+		</array>
+	</dict>
+</dict>
+</plist>
