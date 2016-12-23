@@ -15,6 +15,7 @@
 		2442C9C81E0CB53400D26B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442C9C61E0CB53400D26B4A /* LaunchScreen.storyboard */; };
 		2442C9D31E0CB53500D26B4A /* __1_10Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442C9D21E0CB53500D26B4A /* __1_10Tests.m */; };
 		2442C9DE1E0CB53500D26B4A /* __1_10UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442C9DD1E0CB53500D26B4A /* __1_10UITests.m */; };
+		2442C9EC1E0CBABB00D26B4A /* myPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2442C9EB1E0CBABB00D26B4A /* myPlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2442C9D91E0CB53500D26B4A /* 2-1-10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2-1-10UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2442C9DD1E0CB53500D26B4A /* __1_10UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __1_10UITests.m; sourceTree = "<group>"; };
 		2442C9DF1E0CB53500D26B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2442C9EB1E0CBABB00D26B4A /* myPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = myPlist.plist; path = ../myPlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		2442C9B71E0CB53400D26B4A /* 2-1-10 */ = {
 			isa = PBXGroup;
 			children = (
+				2442C9EB1E0CBABB00D26B4A /* myPlist.plist */,
 				2442C9BB1E0CB53400D26B4A /* AppDelegate.h */,
 				2442C9BC1E0CB53400D26B4A /* AppDelegate.m */,
 				2442C9BE1E0CB53400D26B4A /* ViewController.h */,
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2442C9C81E0CB53400D26B4A /* LaunchScreen.storyboard in Resources */,
+				2442C9EC1E0CBABB00D26B4A /* myPlist.plist in Resources */,
 				2442C9C51E0CB53400D26B4A /* Assets.xcassets in Resources */,
 				2442C9C31E0CB53400D26B4A /* Main.storyboard in Resources */,
 			);
@@ -498,6 +502,7 @@
 				2442C9E41E0CB53500D26B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2442C9E51E0CB53500D26B4A /* Build configuration list for PBXNativeTarget "2-1-10Tests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +511,7 @@
 				2442C9E71E0CB53500D26B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2442C9E81E0CB53500D26B4A /* Build configuration list for PBXNativeTarget "2-1-10UITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +520,7 @@
 				2442C9EA1E0CB53500D26B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
