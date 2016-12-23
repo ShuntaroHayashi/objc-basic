@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZD-og-Z6G">
+                                <rect key="frame" x="36" y="50" width="303" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Oy9-ZN-V1b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-5k-wh9">
+                                <rect key="frame" x="-4" y="451" width="383" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="504145062.29363698">
+                                    <!--2016-12-23 00:17:42 +0000-->
+                                </date>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-Ol-uQ9">
+                                <rect key="frame" x="-4" y="407" width="383" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="done" id="Ovz-6G-JJt">
+                                        <connections>
+                                            <action selector="doneTapd:" destination="BYZ-38-t0r" id="UNr-4G-MlV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E3y-5k-wh9" firstAttribute="top" secondItem="A4a-Ol-uQ9" secondAttribute="bottom" id="3kY-jx-Y7p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E3y-5k-wh9" secondAttribute="trailing" constant="-20" id="5eR-1O-3fz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E3y-5k-wh9" secondAttribute="bottom" id="HHm-OF-OHa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A4a-Ol-uQ9" secondAttribute="trailing" constant="-20" id="Mng-zB-7ZG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CZD-og-Z6G" secondAttribute="trailing" constant="20" id="ZnX-88-bl8"/>
+                            <constraint firstItem="CZD-og-Z6G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="a5Z-zT-s0R"/>
+                            <constraint firstItem="A4a-Ol-uQ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gYv-e8-1sF"/>
+                            <constraint firstItem="E3y-5k-wh9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="jij-u4-jMf"/>
+                            <constraint firstItem="CZD-og-Z6G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="szV-Zv-6DE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myLabel" destination="CZD-og-Z6G" id="RwQ-x5-cNH"/>
+                        <outlet property="myToolBar" destination="A4a-Ol-uQ9" id="zrx-MV-eHG"/>
+                        <outlet property="testDatePicker" destination="E3y-5k-wh9" id="MBH-pg-pND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
