@@ -15,6 +15,7 @@
 		2442CAC81E163E8900D26B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442CAC61E163E8900D26B4A /* LaunchScreen.storyboard */; };
 		2442CAD31E163E8900D26B4A /* __1_14Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442CAD21E163E8900D26B4A /* __1_14Tests.m */; };
 		2442CADE1E163E8900D26B4A /* __1_14UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442CADD1E163E8900D26B4A /* __1_14UITests.m */; };
+		2442CAEC1E163FF200D26B4A /* myPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2442CAEB1E163FF200D26B4A /* myPlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2442CAD91E163E8900D26B4A /* 2-1-14UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2-1-14UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2442CADD1E163E8900D26B4A /* __1_14UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __1_14UITests.m; sourceTree = "<group>"; };
 		2442CADF1E163E8900D26B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2442CAEB1E163FF200D26B4A /* myPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myPlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				2442CABC1E163E8900D26B4A /* AppDelegate.m */,
 				2442CABE1E163E8900D26B4A /* ViewController.h */,
 				2442CABF1E163E8900D26B4A /* ViewController.m */,
+				2442CAEB1E163FF200D26B4A /* myPlist.plist */,
 				2442CAC11E163E8900D26B4A /* Main.storyboard */,
 				2442CAC41E163E8900D26B4A /* Assets.xcassets */,
 				2442CAC61E163E8900D26B4A /* LaunchScreen.storyboard */,
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2442CAC81E163E8900D26B4A /* LaunchScreen.storyboard in Resources */,
+				2442CAEC1E163FF200D26B4A /* myPlist.plist in Resources */,
 				2442CAC51E163E8900D26B4A /* Assets.xcassets in Resources */,
 				2442CAC31E163E8900D26B4A /* Main.storyboard in Resources */,
 			);

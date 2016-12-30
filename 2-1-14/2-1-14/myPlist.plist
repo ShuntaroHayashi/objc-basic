@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>images</key>
+	<array>
+		<string>aomori</string>
+		<string>chiba</string>
+		<string>tokyo</string>
+		<string>kanagawa</string>
+	</array>
+	<key>texts</key>
+	<array>
+		<string>青森県</string>
+		<string>千葉県</string>
+		<string>東京都
+新宿区
+1362万人</string>
+		<string>神奈川県
+横浜市</string>
+	</array>
+</dict>
+</plist>
