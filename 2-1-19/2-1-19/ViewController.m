@@ -7,13 +7,21 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
 
 @end
 
 @implementation ViewController
-
+- (IBAction)onTapd:(id)sender {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    appDelegate.globalString =  self.myTextField.text;
+    
+     [self.myTextField resignFirstResponder];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -23,5 +31,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

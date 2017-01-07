@@ -13,10 +13,11 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize globalString;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    globalString = nil;
     return YES;
 }
 
