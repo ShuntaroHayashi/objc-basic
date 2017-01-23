@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212A2C7F1E25F934002F34F0 /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212A2C7E1E25F934002F34F0 /* registerViewController.m */; };
 		21A094081E25D3B90075467F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A094071E25D3B90075467F /* main.m */; };
 		21A0940B1E25D3B90075467F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0940A1E25D3B90075467F /* AppDelegate.m */; };
 		21A0940E1E25D3B90075467F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0940D1E25D3B90075467F /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		0C255D2EBBEDDC9FE1D4E3D1 /* Pods-SQLiteTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLiteTestUITests/Pods-SQLiteTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1D168064EA38DC8F311D4BF7 /* libPods-SQLiteTestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQLiteTestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		212A2C7D1E25F934002F34F0 /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = ../registerViewController.h; sourceTree = "<group>"; };
+		212A2C7E1E25F934002F34F0 /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerViewController.m; path = ../registerViewController.m; sourceTree = "<group>"; };
 		21A094031E25D3B90075467F /* SQLiteTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A094071E25D3B90075467F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A094091E25D3B90075467F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				21A0940A1E25D3B90075467F /* AppDelegate.m */,
 				21A0940C1E25D3B90075467F /* ViewController.h */,
 				21A0940D1E25D3B90075467F /* ViewController.m */,
+				212A2C7D1E25F934002F34F0 /* registerViewController.h */,
+				212A2C7E1E25F934002F34F0 /* registerViewController.m */,
 				21A0940F1E25D3B90075467F /* Main.storyboard */,
 				21A094121E25D3B90075467F /* Assets.xcassets */,
 				21A094141E25D3B90075467F /* LaunchScreen.storyboard */,
@@ -460,6 +465,7 @@
 				21A0940E1E25D3B90075467F /* ViewController.m in Sources */,
 				21A0940B1E25D3B90075467F /* AppDelegate.m in Sources */,
 				21A094081E25D3B90075467F /* main.m in Sources */,
+				212A2C7F1E25F934002F34F0 /* registerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +697,7 @@
 				21A094321E25D3B90075467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21A094331E25D3B90075467F /* Build configuration list for PBXNativeTarget "SQLiteTestTests" */ = {
 			isa = XCConfigurationList;
@@ -699,6 +706,7 @@
 				21A094351E25D3B90075467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21A094361E25D3B90075467F /* Build configuration list for PBXNativeTarget "SQLiteTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -707,6 +715,7 @@
 				21A094381E25D3B90075467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
