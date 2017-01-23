@@ -25,7 +25,7 @@
     NSString *db_path  = [dir stringByAppendingPathComponent:@"tr_todo.db"];
     FMDatabase *db = [FMDatabase databaseWithPath:db_path];
     // テーブルを作成
-    NSString *sql = @"CREATE TABLE IF NOT EXISTS tr_todo (todo_id INTEGER PRIMARY KEY , todo_title TEXT ,todo_contents TEXT,created DATETIME, modified DATETIME, limit_date DATETIME, delete_flag BOOL); ";
+    NSString *sql = @"CREATE TABLE IF NOT EXISTS tr_todo (todo_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT ,todo_contents TEXT,created DATETIME, modified DATETIME, limit_date DATETIME, delete_flag BOOL); ";
     [db open];
     // SQLを実行
     [db executeUpdate:sql];
