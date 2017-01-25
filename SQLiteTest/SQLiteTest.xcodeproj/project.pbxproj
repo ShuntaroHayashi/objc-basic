@@ -16,6 +16,7 @@
 		21A094161E25D3B90075467F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A094141E25D3B90075467F /* LaunchScreen.storyboard */; };
 		21A094211E25D3B90075467F /* SQLiteTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A094201E25D3B90075467F /* SQLiteTestTests.m */; };
 		21A0942C1E25D3B90075467F /* SQLiteTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A0942B1E25D3B90075467F /* SQLiteTestUITests.m */; };
+		21AE705E1E36E1D3009406D3 /* FMDbConect.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AE705D1E36E1D3009406D3 /* FMDbConect.m */; };
 		29082BFC99EFC53A60076CE8 /* libPods-SQLiteTestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D168064EA38DC8F311D4BF7 /* libPods-SQLiteTestUITests.a */; };
 		76F6177ACF24352E4980681C /* libPods-SQLiteTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F06037BC49F462C4C38FD5E /* libPods-SQLiteTest.a */; };
 		C2813B34CAE9D01CFFB59676 /* libPods-SQLiteTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4854886404668FA9A727028A /* libPods-SQLiteTestTests.a */; };
@@ -59,6 +60,8 @@
 		21A094271E25D3B90075467F /* SQLiteTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLiteTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A0942B1E25D3B90075467F /* SQLiteTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteTestUITests.m; sourceTree = "<group>"; };
 		21A0942D1E25D3B90075467F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21AE705C1E36E1D3009406D3 /* FMDbConect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDbConect.h; sourceTree = "<group>"; };
+		21AE705D1E36E1D3009406D3 /* FMDbConect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDbConect.m; sourceTree = "<group>"; };
 		4854886404668FA9A727028A /* libPods-SQLiteTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SQLiteTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F56386B82064455589A425 /* Pods-SQLiteTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQLiteTest/Pods-SQLiteTest.release.xcconfig"; sourceTree = "<group>"; };
 		512C64E2EBB743E35300F173 /* Pods-SQLiteTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQLiteTestTests/Pods-SQLiteTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 			children = (
 				21A094091E25D3B90075467F /* AppDelegate.h */,
 				21A0940A1E25D3B90075467F /* AppDelegate.m */,
+				21AE705C1E36E1D3009406D3 /* FMDbConect.h */,
+				21AE705D1E36E1D3009406D3 /* FMDbConect.m */,
 				21A0940C1E25D3B90075467F /* ViewController.h */,
 				21A0940D1E25D3B90075467F /* ViewController.m */,
 				212A2C7D1E25F934002F34F0 /* registerViewController.h */,
@@ -466,6 +471,7 @@
 				21A0940B1E25D3B90075467F /* AppDelegate.m in Sources */,
 				21A094081E25D3B90075467F /* main.m in Sources */,
 				212A2C7F1E25F934002F34F0 /* registerViewController.m in Sources */,
+				21AE705E1E36E1D3009406D3 /* FMDbConect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

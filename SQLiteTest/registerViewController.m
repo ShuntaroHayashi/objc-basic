@@ -7,7 +7,7 @@
 //
 
 #import "registerViewController.h"
-#import "FMDatabase.h"
+#import "FMDbConect.h"
 
 @interface registerViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
@@ -29,23 +29,21 @@
 
 - (IBAction)registerOnTap:(id)sender {
     _errorLabel.text = @"";
-    if(![_titleField.text  isEqualToString: @""]){
-        // パスとDBファイル名を指定
-        NSArray  *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *dir = [paths objectAtIndex:0];
-        NSString *db_path  = [dir stringByAppendingPathComponent:@"tr_todo.db"];
-        FMDatabase *db = [FMDatabase databaseWithPath:db_path];
-        
+    if(![_titleField.text  isEqualToString: @""]){        
         NSString *insertSql =  @"INSERT INTO tr_todo (todo_title ,todo_contents ,created , modified , limit_date , delete_flag ) VALUES(?,?,?,?,?,?)";
-        [db open];
-        // SQLを実行
-        BOOL sccessFlag = [db executeUpdate:insertSql,
-            _titleField.text,_contentsField.text,
-            [NSDate date],[NSDate date],
-            [formatter dateFromString:_limitDateField.text],
-            [NSNumber numberWithBool:false]
-         ];
-        [db close];
+        NSString *titl = _titleField.text;
+        NSString *contents = _contentsField.text;
+        NSDate *created = [NSDate date];
+        NSDate *modified = [NSDate date];
+        NSDate *limit_date;
+        NSArray *values;
+        if(![_limitDateField.text  isEqual: @""]){
+            limit_date = [formatter dateFromString:_limitDateField.text];
+            values = @[titl,contents,created,modified,limit_date,[NSNumber numberWithBool:false]];
+        }else{
+            values = @[titl,contents,created,modified,[NSNull null],[NSNumber numberWithBool:false]];
+        }
+        BOOL sccessFlag = [FMDbConect insertFromString:insertSql :values];
         if(sccessFlag){
             _errorLabel.textColor = [UIColor blackColor];
             _errorLabel.text = @"登録に成功しました";
