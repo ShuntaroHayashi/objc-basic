@@ -17,7 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-6d-bA0">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="f8M-kW-qqL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Uv6-X1-VFt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NvD-6d-bA0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MJO-vX-ReP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NvD-6d-bA0" secondAttribute="bottom" id="YAt-fz-039"/>
+                            <constraint firstItem="NvD-6d-bA0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="q0f-8Z-vcA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NvD-6d-bA0" secondAttribute="trailing" id="yUe-CK-dpu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IwF-Ot-F8t">
                         <barButtonItem key="rightBarButtonItem" title="+" id="ZSq-tK-m7d">
@@ -27,6 +43,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="NvD-6d-bA0" id="FJU-Vf-51b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
