@@ -11,7 +11,8 @@
 
 @interface FMDbConect : NSObject
 +(void)initialize;
-+(NSMutableArray<NSMutableArray *> *)selectFromSql:(NSString*)sql;
++(NSMutableArray<NSMutableDictionary *> *)selectFromSql:(NSString*)sql :(NSArray<NSString*>*)columNames;
 +(void)createFromString:(NSString*)sql;
 +(BOOL)insertFromString:(NSString*)sql :(NSArray*)values;
++(BOOL)updateFromString:(NSString *)sql :(NSArray*)values;
 @end

@@ -39,9 +39,9 @@
         NSArray *values;
         if(![_limitDateField.text  isEqual: @""]){
             limit_date = [formatter dateFromString:_limitDateField.text];
-            values = @[titl,contents,created,modified,limit_date,[NSNumber numberWithBool:false]];
+            values = @[titl,contents,created,modified,limit_date,@false];
         }else{
-            values = @[titl,contents,created,modified,[NSNull null],[NSNumber numberWithBool:false]];
+            values = @[titl,contents,created,modified,[NSNull null],@false];
         }
         BOOL sccessFlag = [FMDbConect insertFromString:insertSql :values];
         if(sccessFlag){
