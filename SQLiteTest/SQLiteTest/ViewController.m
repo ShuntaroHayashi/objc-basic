@@ -16,73 +16,76 @@
 
 @implementation ViewController
 {
-    NSMutableArray<NSMutableArray *> *todoItems;
+    NSMutableArray<NSMutableDictionary *> *todoItems;
     
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [super viewDidLoad];
-    
+    //既に存在しない場合table作成
     NSString *createSql = @"CREATE TABLE IF NOT EXISTS tr_todo (todo_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT,todo_contents TEXT,created DATETIME, modified DATETIME, limit_date DATETIME, delete_flag BOOL); ";
     [FMDbConect createFromString:createSql];
 
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear: self];
-    todoItems = [FMDbConect selectFromSql:@"SELECT todo_title,todo_contents,created,modified, limit_date,delete_flag FROM tr_todo ORDER BY limit_date;"];
-    NSMutableArray *removeObjects;
-    for (NSMutableArray *todoItem in todoItems) {
-        if(todoItem[(todoItem.count - 1)] != [NSNumber numberWithBool:true]){
-//            [todoItems removeObject:todoItem];
-            [removeObjects addObject:todoItem];
-        }
-    }
-    for(NSMutableArray *removeObject in removeObjects){
-        [todoItems removeObject:removeObject];
-    }
+    //tableViewの表示内容取得
+    NSString *selectSql = @"SELECT todo_id, todo_title, todo_contents, limit_date FROM tr_todo WHERE delete_flag = 0 ORDER BY limit_date;";
+    NSArray *colums = @[@"todo_id",@"todo_title",@"todo_contents",@"limit_date"];
+    todoItems = [FMDbConect selectFromSql:selectSql :colums];
     [_tableView reloadData];
 }
+//tableViewDelegate実装
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *str;
-    NSMutableArray *todoItem = todoItems[indexPath.row];
-    if(todoItem.count == 6){
-        long time = [todoItem[4] longValue];
+    NSString *limitDateString;
+    NSMutableDictionary *todoItem = todoItems[indexPath.row];
+    if (![todoItem[@"limit_date"] isEqual:[NSNull null]]) {
+        //年月日だけの現在日時を取得
+        NSDate *today = [formatter dateFromString:[formatter stringFromDate:[NSDate date]]];
+        //limit_dateをNSDate型に直す
+        long time = [todoItem[@"limit_date"] longValue];
         NSDate *limit_date = [NSDate dateWithTimeIntervalSince1970:time];
-//        if([[NSDate date] compare:limit_date]
-//            NSOrderedDescending){
-//            str = [NSString stringWithFormat:@"%@ %@",[formatter stringFromDate:limit_date],todoItem[0]];
-//        }else{
-//            str = [NSString stringWithFormat:@"期限切れ　%@",todoItem[0]];
-//        }
-        switch ([[NSDate date] compare:limit_date]) {
+        //現在日時とlimit_dateの比較
+        switch ([today compare:limit_date]) {
             case NSOrderedSame:
-                str = [NSString stringWithFormat:@"%@ %@",[formatter stringFromDate:limit_date],todoItem[0]];
+                limitDateString = @"today";
                 break;
             case NSOrderedAscending:
-                str = [NSString stringWithFormat:@"%@ %@",[formatter stringFromDate:limit_date],todoItem[0]];
+                limitDateString = [formatter stringFromDate:limit_date];
                 break;
             case  NSOrderedDescending:
-                str = [NSString stringWithFormat:@"期限切れ　%@",todoItem[0]];
-                break;
-                
-            default:
+                limitDateString = @"期限切れ";
                 break;
         }
     }else{
-        str = [NSString stringWithFormat:@"期限無し　%@",todoItem[0]];
+        limitDateString = @"期限無し";
     }
-//    NSString *limit_date = [formatter stringFromDate:todoItems[indexPath.row][4]];
-    cell.textLabel.text = str;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",limitDateString ,todoItem[@"todo_title"]];
     return  cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return  todoItems.count;
 }
-
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return true;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"削除";
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *updateSql = @"UPDATE tr_todo SET delete_flag = ? WHERE todo_id = ?";
+    NSArray *values = @[@true,todoItems[indexPath.row][@"todo_id"]];
+    BOOL sccessFlag = [FMDbConect updateFromString:updateSql :values];
+    if(sccessFlag){
+        [todoItems removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
+//tabeleViewDelegate実装完了
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
